@@ -21,9 +21,15 @@ $ npm install -g yarn
 $ yarn install
 ```
 
+### 初始化数据
+
+存放【abi】数据的目录：项目根目录/src/abis/
+
+修改合约地址的地方：项目根目录/src/constants/tokens.ts
+
 ### 开发环境 · 运行:
 
-在项目更新目录中执行以下命令。
+在项目根目录中执行以下命令。
 
 ```bash
 $ yarn dev

@@ -1,4 +1,4 @@
-import { web3, getLootContract, getDefaultAccount, gasOptions } from './web3';
+import { getLootContract, getDefaultAccount, gasOptions } from './web3';
 
 const MetacoreServer = {
   async claim(nftId: string) {

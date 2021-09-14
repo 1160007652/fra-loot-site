@@ -11,7 +11,7 @@ const getContract = (address: string, ABI: any, options) => {
 };
 
 const getLootContract = () => {
-  return getContract(Tokens.LegootAddress, LootABI, { gasLimit: '8000000' });
+  return getContract(Tokens.LootAddress, LootABI, { gasLimit: '8000000' });
 };
 
 const getBalance = async (address: string) => {
