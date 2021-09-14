@@ -2,7 +2,7 @@ Muniz - React - TPL
 
 ## 技术
 
-react、react-router、mobx、webpack5、less
+react、react-router、mobx、webpack5、less、Web3、Metamask
 
 ## 项目构建:
 
