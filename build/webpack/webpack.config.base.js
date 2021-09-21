@@ -142,7 +142,7 @@ module.exports = {
   plugins: [
     new WebpackBar(),
     new FriendlyErrorsWebpackPlugin(),
-    // new CopyWebpackPlugin({ patterns: [{ from: 'public/images/', to: 'images' }] }),
+    new CopyWebpackPlugin({ patterns: [{ from: 'public/_redirects', to: './' }] }),
     new HtmlWebpackPlugin({
       template: path.resolve(PROJECT_ROOT, './public/index.html'),
       filename: 'index.html',
