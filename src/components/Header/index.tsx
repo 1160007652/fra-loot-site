@@ -9,7 +9,7 @@ const Header = () => {
   const { account } = useWeb3React();
   return (
     <header className="header">
-      <div className="logo">Legoot</div>
+      <div className="logo">Loot</div>
       <ConnectWallet />
     </header>
   );

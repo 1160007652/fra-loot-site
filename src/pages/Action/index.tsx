@@ -12,7 +12,7 @@ import { useHistory } from 'react-router';
 import pageURL from '_constants/pageURL';
 
 function Action() {
-  const { account } = useWeb3React();
+  const { account, chainId } = useWeb3React();
   const hirstory = useHistory();
   const [word, setWord] = useState('');
   const [nftList, setNftList] = useState([]);
@@ -34,6 +34,10 @@ function Action() {
   }
 
   async function onClaimSubmit() {
+    if (chainId !== 523) {
+      message.warning('Please connect to the Findora network to operate');
+      return;
+    }
     if (word.trim() === '') {
       message.info('Can not be empty');
       return;
@@ -62,7 +66,7 @@ function Action() {
       <div className="title">Loot</div>
       <div className="sub_info"> Findora Loot Contract ` Example</div>
       <div className="input_box">
-        <Input placeholder="Input ID（ 0 ~ 8000 ）to get a Legoot" onChange={onClaimWord} className="word-input" />
+        <Input placeholder="Input ID（ 0 ~ 8000 ）to get a Loot" onChange={onClaimWord} className="word-input" />
         <div className="btn_box">
           <Button onClick={onClaimSubmit}>Mint</Button>
         </div>
