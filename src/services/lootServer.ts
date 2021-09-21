@@ -20,7 +20,6 @@ const MetacoreServer = {
     const contract = getLootContract();
     const address = await getDefaultAccount();
     const result = [];
-    console.log('开始获取nft');
     try {
       let nftTotal = await contract.methods.balanceOf(address).call();
       console.log('当前地址拥有的NFT数量', nftTotal);
@@ -50,6 +49,7 @@ const MetacoreServer = {
     const result = [];
     try {
       let count = await contract.methods.totalSupply().call();
+      console.log('有几个 NFT', count);
       while (count > 0) {
         count = count - 1;
         try {

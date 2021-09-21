@@ -29,12 +29,12 @@ const getDefaultAccount = async () => {
 };
 
 const gasOptions = async (params = {}) => {
-  // const gasLimit = Web3.utils.toHex(8000000);
+  const gasLimit = Web3.utils.toHex(8000000);
   // const gasPrice = Web3.utils.toHex(1000000);
   const from = await getDefaultAccount();
   return {
     from,
-    // gasLimit,
+    gasLimit,
     // gasPrice,
     ...params,
   };

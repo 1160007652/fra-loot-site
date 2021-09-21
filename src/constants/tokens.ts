@@ -1,3 +1,3 @@
 export default {
-  LootAddress: '0x9ee77ad564F9AD484D1fD34a8413049bee56B8d4',
+  LootAddress: '0x1f12012cf400B83A5B0E7B83D255018cAcE21662',
 };
