@@ -44,3 +44,7 @@ $ yarn build
 ```
 
 > 构造的资源位于 **"项目根目录/dist"**
+
+### 访问地址
+
+https://gifted-raman-82b023.netlify.app
