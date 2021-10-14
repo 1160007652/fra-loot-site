@@ -17,7 +17,7 @@ function Action() {
   const [word, setWord] = useState('');
   const [nftList, setNftList] = useState([]);
 
-  useEffect(() => {
+  function getLootList() {
     services.lootServer
       .getNFTList()
       .then((data) => {
@@ -27,6 +27,9 @@ function Action() {
       .catch((err) => {
         console.log(err.message);
       });
+  }
+  useEffect(() => {
+    getLootList();
   }, [account]);
 
   function onClaimWord(e) {
@@ -47,6 +50,7 @@ function Action() {
       if (isExist) {
         await services.lootServer.claim(word);
         message.success('mint successed');
+        getLootList();
       } else {
         message.warn('NFT has been claimed');
       }
