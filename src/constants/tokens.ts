@@ -1,4 +1,8 @@
 export default {
-  LootAddress: '0x1f4bEF3A39Cb9fD35cb221500b383E2d6b56C9D7',
-  // '0x92006802c7bc670e32C90a2C55B508d8731c2821', //'0xce05dcC8CE32774c504e9d143948F4aCDA20572e',
+  moca: {
+    lootAddress: '0xDB0C633d92e9a2A81ab8B58087dAf2FE796f6fA5',
+  },
+  dev: {
+    lootAddress: '0x1f4bEF3A39Cb9fD35cb221500b383E2d6b56C9D7',
+  },
 };

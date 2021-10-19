@@ -1,4 +1,5 @@
 import Web3 from 'web3';
+import { getWeb3ReactContext } from '@web3-react/core';
 import BigNumber from 'bignumber.js';
 import Tokens from '_constants/tokens';
 
@@ -11,7 +12,15 @@ const getContract = (address: string, ABI: any, options) => {
 };
 
 const getLootContract = () => {
-  return getContract(Tokens.LootAddress, LootABI, { gasLimit: '8000000' });
+  const { chainId } = window['__LootAPP__'];
+  if (chainId === 523) {
+    return getContract(Tokens.dev.lootAddress, LootABI, { gasLimit: '8000000' });
+  }
+  if (chainId === 524) {
+    return getContract(Tokens.moca.lootAddress, LootABI, { gasLimit: '8000000' });
+  }
+
+  throw Error('chainId undefined , not abi');
 };
 
 const getBalance = async (address: string) => {

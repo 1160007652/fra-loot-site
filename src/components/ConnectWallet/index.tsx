@@ -16,6 +16,12 @@ const ConnectWallet = () => {
   const [activatingConnector, setActivatingConnector] = useState<InjectedConnector>();
 
   useEffect(() => {
+    window['__LootAPP__'] = {
+      chainId,
+    };
+  }, [chainId]);
+
+  useEffect(() => {
     if (activatingConnector && activatingConnector === connector) {
       setActivatingConnector(undefined);
     } else {
